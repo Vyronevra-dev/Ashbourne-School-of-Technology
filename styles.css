@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+header .navbar {
+    width: 100%;
+    height: 70px;
+    padding: 5px 10px;
+    background-color: rgb(125, 125, 125);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header .navbar .left img {
+    width: 250px;
+}
+
+header .navbar .right {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+header .navbar .right ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+header .navbar .right ul li {
+    padding: 0px 10px;
+}
+
+header .navbar .right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+header .navbar .right ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 865px) {
+    .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: 10px;
+    }
+
+    .burger span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+    }
+
+    header .navbar .right ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    list-style-type: none;
+    }
+
+    header .navbar .right ul.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(125, 125, 125);
+    list-style-type: none;
+    z-index: 99;
+    }
+    
+    header .navbar .right ul li a {
+    display: block;
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.5s;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 17px 20px;
+    }
+
+    header .navbar .right ul li a:hover {
+    color: rgb(0, 0, 0);
+    }
+
+    .burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.open span:nth-child(2) {
+    opacity: 0;
+    }
+
+    .burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+.hero {
+    padding-top: 65px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero .hero-img {
+    width: 50%;
+    background-image: url('https://www.brightermonday.co.ke/discover/wp-content/uploads/2022/10/imgl1048-1024x683.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .hero-text {
+    width: 50%;
+    padding: 20vh 20px;
+
+}
+
+.hero .hero-text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero .hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .hero-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(125, 125, 125);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.hero .hero-text .btn:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.hero .hero-text .btn span {
+    margin-left: 10px;
+}
+
+#about-us {
+    padding: 50px 10px;
+}
+
+#about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+}
